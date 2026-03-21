@@ -296,3 +296,5 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_cs1tg")
 animation = &"idle_right"
 frame_progress = 0.9354557
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2113923916]

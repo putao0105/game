@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c27hsta5u08q"]
+
+[ext_resource type="Texture2D" uid="uid://b2hct4uhndyau" path="res://assets/template/mksh-1f.png" id="1_61mbl"]
+[ext_resource type="PackedScene" uid="uid://dftrpkfy22rxb" path="res://scenes/player.tscn" id="2_jtwsw"]
+
+[node name="FirstFloor" type="Node2D" unique_id=1495722705]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281732618]
+position = Vector2(566, -49)
+rotation = 1.5707964
+scale = Vector2(8, 8)
+texture = ExtResource("1_61mbl")
+
+[node name="Player" parent="." unique_id=816336856 instance=ExtResource("2_jtwsw")]
+position = Vector2(3034, 758)
