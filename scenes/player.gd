@@ -1,11 +1,44 @@
-extends Node2D
+extends CharacterBody2D
+
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+const SPEED = 300.0
+var last_direction = Vector2.DOWN
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _physics_process(delta: float) -> void:
+	
+	_process_movement()
+	_process_animation()
+	move_and_slide()
+	
+func _process_movement() -> void:
+	
+	var direction := Input.get_vector("left", "right", "up", "down")
+	
+	if direction != Vector2.ZERO:
+		velocity = direction * SPEED
+		last_direction = direction
+	else:
+		velocity = Vector2.ZERO
+	
+	
+func _process_animation() -> void:
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	if velocity != Vector2.ZERO:
+		_play_animation("run", last_direction)
+	else:
+		_play_animation("idle", last_direction)
+	
+	
+func _play_animation(prefix: String, dir: Vector2) -> void: 
+	
+	if dir.x != 0:
+		animated_sprite_2d.flip_h = dir.x < 0
+		animated_sprite_2d.play(prefix + "_right")
+	elif dir.y > 0:
+		animated_sprite_2d.play(prefix + "_down")
+	elif dir.y < 0:
+		animated_sprite_2d.play(prefix + "_up")
+		
