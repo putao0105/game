@@ -220,7 +220,7 @@ sources/0 = SubResource("TileSetAtlasSource_xg03b")
 [node name="Mksh2f" type="Sprite2D" parent="." unique_id=2082402319]
 position = Vector2(6, 21)
 rotation = 1.5707964
-scale = Vector2(8, 8)
+scale = Vector2(2, 2)
 texture = ExtResource("1_qwa8g")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Mksh2f" unique_id=452082106]

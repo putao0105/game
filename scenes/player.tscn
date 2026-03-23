@@ -292,7 +292,6 @@ animations = [{
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1082830221]
-scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_cs1tg")
 animation = &"idle_right"
 frame_progress = 0.9354557
