@@ -6,10 +6,10 @@
 [node name="FirstFloor" type="Node2D" unique_id=1495722705]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1281732618]
-position = Vector2(566, -49)
+position = Vector2(7, 12)
 rotation = 1.5707964
 scale = Vector2(8, 8)
 texture = ExtResource("1_61mbl")
 
 [node name="Player" parent="." unique_id=816336856 instance=ExtResource("2_jtwsw")]
-position = Vector2(3034, 758)
+position = Vector2(3020, 1026)
